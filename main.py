@@ -8,6 +8,10 @@ app = Flask(__name__)
 
 
 
+@app.route('/', methods=['GET', 'POST'])
+def hello():
+    if request.method == 'GET':
+        return 'hello'
 @app.route('/hello', methods=['GET', 'POST'])
 def hello():
     if request.method == 'GET':
